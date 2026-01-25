@@ -123,84 +123,84 @@
       "type": "page-list",
       "blocks": {
         "page_card_3H8VL3": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "auvergne-rhone-alpes",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_6.png"
           }
         },
         "page_card_7AwHgj": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "bourgogne-franche-comte",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_8.png"
           }
         },
         "page_card_qbhjQ7": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "bretagne",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px.png"
           }
         },
         "page_card_G8KHww": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "centre-val-de-loire",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_7.png"
           }
         },
         "page_card_hkpmBR": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "grand-est",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_11.png"
           }
         },
         "page_card_echgEF": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "nouvelle-aquitaine",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_4.png"
           }
         },
         "page_card_c3BfpW": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "ile-de-france",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_3.png"
           }
         },
         "page_card_CBakK4": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "normandie",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_1.png"
           }
         },
         "page_card_a3pf34": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "nouvelle-aquitaine-1",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_10.png"
           }
         },
         "page_card_PqK46X": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "occitanie",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_2.png"
           }
         },
         "page_card_b6fggH": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "pays-de-la-loire",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_9.png"
           }
         },
         "page_card_gpXxaD": {
-          "type": "page_card",
+          "type": "item",
           "settings": {
             "page": "provence-alpes-cote-dazur",
             "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_5.png"
@@ -259,11 +259,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text_YQYnrY",
-        "button"
-      ],
+      "block_order": ["heading", "text_YQYnrY", "button"],
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
