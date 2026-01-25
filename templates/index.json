@@ -259,7 +259,11 @@
           }
         }
       },
-      "block_order": ["heading", "text_YQYnrY", "button"],
+      "block_order": [
+        "heading",
+        "text_YQYnrY",
+        "button"
+      ],
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
@@ -342,14 +346,13 @@
         "feature_f7adma": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/Tour_de_France_piou_piou.png",
             "text": "Design conçu en France"
           }
         },
         "feature_dmW9i4": {
           "type": "feature",
           "settings": {
-            "text": "Affiche murale de qualité supérieure"
+            "text": "Livraison en 2 à 5 jours"
           }
         },
         "feature_FktFyH": {
@@ -361,7 +364,7 @@
         "feature_3YwdpX": {
           "type": "feature",
           "settings": {
-            "text": "Livraison sous 72h"
+            "text": "Service client et atelier en France"
           }
         }
       },
