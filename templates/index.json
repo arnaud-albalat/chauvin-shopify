@@ -340,60 +340,6 @@
         "padding_bottom": 88
       }
     },
-    "multicolumn_9VcDi3": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_Ew8EkE": {
-          "type": "column",
-          "settings": {
-            "title": "Colonne",
-            "text": "<p>Associez un texte à une image pour mettre en avant le produit, la collection ou l’article de blog de votre choix. Ajoutez des informations sur la disponibilité ou le style. Vous pouvez même fournir un avis.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_ixpgfg": {
-          "type": "column",
-          "settings": {
-            "title": "Colonne",
-            "text": "<p>Associez un texte à une image pour mettre en avant le produit, la collection ou l’article de blog de votre choix. Ajoutez des informations sur la disponibilité ou le style. Vous pouvez même fournir un avis.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_wTYEdQ": {
-          "type": "column",
-          "settings": {
-            "title": "Colonne",
-            "text": "<p>Associez un texte à une image pour mettre en avant le produit, la collection ou l’article de blog de votre choix. Ajoutez des informations sur la disponibilité ou le style. Vous pouvez même fournir un avis.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Ew8EkE",
-        "column_ixpgfg",
-        "column_wTYEdQ"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "Texte du bouton",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "arguments_YxY7yw": {
       "type": "arguments",
       "blocks": {
@@ -445,7 +391,6 @@
     "page_list_TUQb8c",
     "image-with-text",
     "presse_logos_BWPCQb",
-    "multicolumn_9VcDi3",
     "arguments_YxY7yw"
   ]
 }
