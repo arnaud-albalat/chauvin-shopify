@@ -287,35 +287,35 @@
         "logo_3JdX88": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Logo-dna-2022_svg.png",
+            "image": "shopify://shop_images/DNA.png",
             "link": ""
           }
         },
         "logo_P9Ft76": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/La-provence-2023.svg",
+            "image": "shopify://shop_images/La_Provence.png",
             "link": ""
           }
         },
         "logo_yEK7Rm": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/960px-LVDNgrandlogo.png",
+            "image": "shopify://shop_images/La_voix_du_nord_1.png",
             "link": ""
           }
         },
         "logo_UNJcHe": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/Logo_midi_libre.png",
+            "image": "shopify://shop_images/Midi_Libre.png",
             "link": ""
           }
         },
         "logo_LyE7LT": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/France_Bleu_Normandie_2021.svg",
+            "image": "shopify://shop_images/france_bleu.png",
             "link": ""
           }
         }
