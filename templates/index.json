@@ -19,6 +19,54 @@
         "padding_bottom": 52
       }
     },
+    "featured_posters_kdYfFw": {
+      "type": "featured-posters",
+      "blocks": {
+        "featured_collection_J7nffx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dorlisheim"
+          }
+        },
+        "featured_collection_cYJLDG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "fauville-en-caux"
+          }
+        },
+        "featured_collection_mpQipH": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "molsheim"
+          }
+        },
+        "featured_collection_jkkwLr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "marseillan"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_J7nffx",
+        "featured_collection_cYJLDG",
+        "featured_collection_mpQipH",
+        "featured_collection_jkkwLr"
+      ],
+      "name": "Nos plus belles affiches",
+      "settings": {
+        "title": "Nos plus belles affiches",
+        "heading_size": "h1",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "page_list_TUQb8c": {
       "type": "page-list",
       "blocks": {
@@ -340,6 +388,7 @@
   },
   "order": [
     "custom_liquid_EYdEF8",
+    "featured_posters_kdYfFw",
     "page_list_TUQb8c",
     "image-with-text",
     "presse_logos_BWPCQb",
