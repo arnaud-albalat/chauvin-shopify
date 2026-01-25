@@ -13,7 +13,9 @@
       "type": "video-search-hero",
       "settings": {
         "video_url": "https://cdn.shopify.com/videos/c/o/v/76343d4d41de4054add13686f53f1e02.mp4",
-        "overlay_opacity": 40
+        "title": "Quel coin de France fait battre votre cœur ?",
+        "overlay_opacity": 40,
+        "placeholder_text": "Rechercher une commune..."
       }
     },
     "featured_posters_kdYfFw": {
@@ -343,28 +345,28 @@
         "feature_f7adma": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/communaute_passionnee.png",
+            "icon": "shopify://shop_images/Communaute_passionnee_2.png",
             "text": "Communauté passionée"
           }
         },
         "feature_dmW9i4": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/Livraison_picto.png",
+            "icon": "shopify://shop_images/Livraison_rapide_1.png",
             "text": "Livraison en 2 à 5 jours"
           }
         },
         "feature_FktFyH": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/Paiement_securise.png",
+            "icon": "shopify://shop_images/Paiement_securise_1.png",
             "text": "Paiement simple 100% sécurisé"
           }
         },
         "feature_3YwdpX": {
           "type": "feature",
           "settings": {
-            "icon": "shopify://shop_images/service_client_atelier.png",
+            "icon": "shopify://shop_images/Atelier_francais.png",
             "text": "Service client et atelier en France"
           }
         }
@@ -379,6 +381,7 @@
       "settings": {
         "bg_color": "#fcfcfc",
         "text_color": "#6a6a6a",
+        "icon_height": 50,
         "padding_top_bottom": 40
       }
     }
