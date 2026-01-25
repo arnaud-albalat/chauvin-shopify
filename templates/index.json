@@ -339,24 +339,28 @@
         "feature_f7adma": {
           "type": "feature",
           "settings": {
-            "text": "Design conçu en France"
+            "icon": "shopify://shop_images/communaute_passionnee.png",
+            "text": "Communauté passionée"
           }
         },
         "feature_dmW9i4": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Livraison_picto.png",
             "text": "Livraison en 2 à 5 jours"
           }
         },
         "feature_FktFyH": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/Paiement_securise.png",
             "text": "Paiement simple 100% sécurisé"
           }
         },
         "feature_3YwdpX": {
           "type": "feature",
           "settings": {
+            "icon": "shopify://shop_images/service_client_atelier.png",
             "text": "Service client et atelier en France"
           }
         }
@@ -369,7 +373,7 @@
       ],
       "name": "Barre de Réassurance",
       "settings": {
-        "bg_color": "#eef6f5",
+        "bg_color": "#fcfcfc",
         "text_color": "#6a6a6a",
         "icon_width": 50,
         "padding_top_bottom": 40
