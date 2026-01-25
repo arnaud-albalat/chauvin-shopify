@@ -67,6 +67,58 @@
         "padding_bottom": 36
       }
     },
+    "featured_products_T9r7Je": {
+      "type": "featured-products",
+      "blocks": {
+        "featured_product_HEkbcA": {
+          "type": "featured_product",
+          "settings": {
+            "product": "tasse-aubenas"
+          }
+        },
+        "featured_product_UBF3HE": {
+          "type": "featured_product",
+          "settings": {
+            "product": "gourde-fecamp"
+          }
+        },
+        "featured_product_kzznxw": {
+          "type": "featured_product",
+          "settings": {
+            "product": "poster-pezenas"
+          }
+        },
+        "featured_product_LYCPY3": {
+          "type": "featured_product",
+          "settings": {
+            "product": "serviette-de-bain-saint-valery-en-caux"
+          }
+        }
+      },
+      "block_order": [
+        "featured_product_HEkbcA",
+        "featured_product_UBF3HE",
+        "featured_product_kzznxw",
+        "featured_product_LYCPY3"
+      ],
+      "name": "Nos produits",
+      "settings": {
+        "title": "Nos produits",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "page_list_TUQb8c": {
       "type": "page-list",
       "blocks": {
@@ -389,6 +441,7 @@
   "order": [
     "custom_liquid_EYdEF8",
     "featured_posters_kdYfFw",
+    "featured_products_T9r7Je",
     "page_list_TUQb8c",
     "image-with-text",
     "presse_logos_BWPCQb",
