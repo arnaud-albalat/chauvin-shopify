@@ -1,0 +1,167 @@
+{% schema %}
+{
+  "name": "Barre de Réassurance",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur de fond",
+      "default": "#eef6f5"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur du texte",
+      "default": "#6a6a6a"
+    },
+    {
+      "type": "range",
+      "id": "icon_width",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Largeur des icônes",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_top_bottom",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Espacement vertical",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Élément de réassurance",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icône (SVG ou PNG transparent)"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texte",
+          "default": "Votre texte ici"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Barre de Réassurance",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Design conçu en France"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Affiche murale de qualité supérieure"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Paiement simple 100% sécurisé"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "text": "Livraison sous 72h"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .rassurance-section {
+    background-color: {{ section.settings.bg_color }};
+    color: {{ section.settings.text_color }};
+    padding: {{ section.settings.padding_top_bottom }}px 20px;
+    width: 100%;
+  }
+
+  .rassurance-container {
+    max-width: 1400px; /* Largeur maximale pour ne pas trop étirer sur les grands écrans */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around; /* Espacement égal entre les éléments */
+    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile */
+    gap: 30px; /* Espace entre les éléments */
+    align-items: flex-start;
+  }
+
+  .rassurance-item {
+    flex: 1 1 150px; /* Grow, shrink, basis : permet l'adaptation responsive */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px; /* Empêche le texte de devenir trop large */
+  }
+
+  .rassurance-icon {
+    width: {{ section.settings.icon_width }}px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+    object-fit: contain;
+  }
+
+  .rassurance-text {
+    /* Font-family héritée automatiquement du body */
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600; /* Légèrement gras comme sur l'image */
+    margin: 0;
+  }
+
+  /* Responsive Mobile */
+  @media (max-width: 768px) {
+    .rassurance-container {
+      justify-content: center; /* Centre les éléments sur mobile */
+      gap: 40px;
+    }
+    
+    .rassurance-item {
+      flex-basis: 40%; /* Affiche 2 éléments par ligne sur mobile */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .rassurance-item {
+      flex-basis: 100%; /* 1 seul élément par ligne sur très petits écrans */
+    }
+  }
+</style>
+
+<div class="rassurance-section">
+  <div class="rassurance-container">
+    {% for block in section.blocks %}
+      <div class="rassurance-item" {{ block.shopify_attributes }}>
+        {% if block.settings.icon != blank %}
+          {{ block.settings.icon | image_url: width: 200 | image_tag: loading: 'lazy', class: 'rassurance-icon', alt: block.settings.text }}
+        {% else %}
+           <div class="rassurance-icon" style="background-color: rgba(0,0,0,0.1); height: {{ section.settings.icon_width }}px; border-radius: 5px;"></div>
+        {% endif %}
+        
+        <p class="rassurance-text">{{ block.settings.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>

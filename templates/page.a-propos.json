@@ -1,0 +1,137 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "multirow_ztpaKT": {
+      "type": "multirow",
+      "blocks": {
+        "row_WzQjd6": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Parce que chaque ville de France a son histoire",
+            "text": "<p>Créé en 2026, Club Chauvin est une marque française d’objets-souvenirs inspirés des paysages typiques de nos villes et villages français. </p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_trDp7h": {
+          "type": "row",
+          "settings": {
+            "image": "shopify://shop_images/Tour_de_France_piou_piou.png",
+            "caption": "",
+            "heading": "Plus qu'un souvenir, un hommage à votre coin de France",
+            "text": "<p>Notre mission est d’offrir à chaque commune, des villes aux villages les plus secrets, son propre univers graphique. Nos créations capturent l'âme de nos régions à travers une esthétique vintage et élégante.</p><p>Retrouvez nos designs exclusifs sur une large gamme d’objets : affiches, mugs, tote bags, briquets ou arts de la table. </p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_Eq6BGY": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Parce que vos souvenirs méritent le meilleur",
+            "text": "<p>Nous sélectionnons avec soin des supports de qualité pour nos illustrations : affiches aux finitions soignées, mugs, tote bags et accessoires. </p><p>Chaque pièce est préparée à la commande pour garantir une impression parfaite et une esthétique unique. </p><p>Offrez-vous un morceau d'histoire locale avec des objets au design singulier, livrés chez vous avec la plus grande attention.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_MCAhem": {
+          "type": "row",
+          "settings": {
+            "caption": "",
+            "heading": "Célébrez vos racines avec style",
+            "text": "<p>Des bourgs de caractère aux villages les plus secrets, nous offrons à chaque commune son propre univers graphique.</p><p>Nos créations capturent l'âme de nos régions à travers un regard vintage, élégant et résolument moderne.</p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_WzQjd6",
+        "row_trDp7h",
+        "row_Eq6BGY",
+        "row_MCAhem"
+      ],
+      "name": "t:sections.multirow.presets.name",
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "image_layout": "alternate-left",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-4",
+        "row_color_scheme": "scheme-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_n6MnHA": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pPbgnV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Parler de sa marque",
+            "heading_size": "h1"
+          }
+        },
+        "text_pdRpB8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Partagez des informations sur votre marque. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue à vos clients dans votre boutique.</p>"
+          }
+        },
+        "button_W3ierN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Texte du bouton",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pPbgnV",
+        "text_pdRpB8",
+        "button_W3ierN"
+      ],
+      "custom_css": [],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multirow_ztpaKT",
+    "rich_text_n6MnHA"
+  ]
+}
