@@ -1,0 +1,297 @@
+{% schema %}
+{
+  "name": "Video Search Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL",
+      "default": "https://cdn.shopify.com/videos/c/o/v/76343d4d41de4054add13686f53f1e02.mp4"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Quel coin de France fait battre votre cœur ?"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay Opacity",
+      "default": 40
+    },
+    {
+      "type": "text",
+      "id": "placeholder_text",
+      "label": "Search Placeholder",
+      "default": "Rechercher une commune..."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Search Hero"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="video-hero-container">
+  {% if section.settings.video_url != blank %}
+    <video class="video-hero-bg" autoplay muted loop playsinline>
+      <source src="{{ section.settings.video_url }}" type="video/mp4">
+    </video>
+  {% endif %}
+  
+  <div class="video-hero-overlay" style="background-color: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});"> </div>
+
+  <div class="hero-search-wrapper">
+    <div class="hero-search-container">
+      {% if section.settings.title != blank %}
+        <h1 class="hero-search-title">{{ section.settings.title }}</h1>
+      {% endif %}
+      <div class="search-input-group">
+        <span class="search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </span>
+        <input
+          type="text"
+          id="hero-search-input"
+          placeholder="{{ section.settings.placeholder_text }}"
+          autocomplete="off"
+          class="hero-search-input"
+        >
+      </div>
+      <div id="hero-search-results" class="hero-search-results" style="display:none;"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .video-hero-container {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .video-hero-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .video-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  /* Existing Styles Adapted */
+  .hero-search-wrapper {
+    width: 100%;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 3; /* Above video and overlay */
+  }
+
+  .hero-search-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-search-title {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 48px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .hero-search-title {
+      font-size: 3.7rem;
+    }
+  }
+
+  .search-input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-left: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Added shadow for better visibility over video */
+  }
+
+  .search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-search-input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+  }
+
+  .hero-search-input:focus-visible { 
+     box-shadow: none;
+  }
+
+  .hero-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 20;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.2s;
+  }
+
+  .search-result-item:last-child {
+    border-bottom: none;
+  }
+
+  .search-result-item:hover {
+    background-color: #f9f9f9;
+  }
+
+  .result-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+    background-color: #eee;
+  }
+
+  .result-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .result-title {
+    font-weight: 600;
+    font-size: 15px;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('hero-search-input');
+    const resultsContainer = document.getElementById('hero-search-results');
+    let typingTimer;
+
+    if (!input) return;
+
+    input.addEventListener('input', function() {
+      const query = this.value;
+      
+      clearTimeout(typingTimer);
+      
+      if (query.length < 2) {
+        resultsContainer.style.display = 'none';
+        resultsContainer.innerHTML = '';
+        return;
+      }
+
+      typingTimer = setTimeout(function() {
+        fetchCollections(query);
+      }, 300);
+    });
+
+    function fetchCollections(query) {
+      if (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) {
+        fetch(`${window.Shopify.routes.root}search/suggest.json?q=${query}&resources[type]=collection&resources[limit]=8`)
+          .then(response => response.json())
+          .then(data => {
+            const collections = data.resources.results.collections || [];
+
+            if (collections.length > 0) {
+              renderResults(collections);
+            } else {
+              resultsContainer.style.display = 'block';
+              resultsContainer.innerHTML = '<div style="padding:15px; color:#666;">Aucune collection trouvée.</div>';
+            }
+          });
+      }
+    }
+
+    function renderResults(collections) {
+      let html = '';
+      
+      collections.forEach(item => {
+        let imgTag = '';
+        if (item.featured_image && item.featured_image.url) {
+           imgTag = `<img src="${item.featured_image.url}" class="result-image" alt="${item.alt || ''}">`;
+        } else {
+           imgTag = `<div class="result-image" style="display:flex;align-items:center;justify-content:center;color:#999;font-size:10px;"></div>`;
+        }
+
+        html += `
+          <a href="${item.url}" class="search-result-item">
+            ${imgTag}
+            <div class="result-info">
+              <span class="result-title">${item.title}</span>
+            </div>
+          </a>
+        `;
+      });
+      
+      resultsContainer.innerHTML = html;
+      resultsContainer.style.display = 'block';
+    }
+
+    document.addEventListener('click', function(e) {
+      const container = document.querySelector('.hero-search-container');
+      if (container && !container.contains(e.target)) {
+        resultsContainer.style.display = 'none';
+      }
+    });
+  });
+</script>
