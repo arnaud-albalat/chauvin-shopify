@@ -245,7 +245,7 @@
         "text_YQYnrY": {
           "type": "text",
           "settings": {
-            "text": "<p>Derrière Club Chauvin, il y a deux passionnés du patrimoine, Camille et Thomas. Après avoir parcouru la France, ils ont fait le constat que les petits villages n'avaient pas tous le droit à leurs objets-souvenirs. Club Chauvin était né.</p>",
+            "text": "<p>Derrière Club Chauvin, il y a deux passionnés du patrimoine, Élisabeth et Arnaud. Après avoir parcouru la France, ils ont fait le constat que les petits villages n'avaient pas tous le droit à leurs objets-souvenirs. Club Chauvin était né.</p>",
             "text_style": "body"
           }
         },
@@ -263,6 +263,7 @@
         "text_YQYnrY",
         "button"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
