@@ -72,7 +72,7 @@
         "featured_product_HEkbcA": {
           "type": "featured_product",
           "settings": {
-            "product": "tasse-aubenas"
+            "product": "carnet-compiegne"
           }
         },
         "featured_product_UBF3HE": {
@@ -84,13 +84,13 @@
         "featured_product_kzznxw": {
           "type": "featured_product",
           "settings": {
-            "product": "poster-pezenas"
+            "product": "serviette-de-bain-dieppe"
           }
         },
         "featured_product_LYCPY3": {
           "type": "featured_product",
           "settings": {
-            "product": "serviette-de-bain-saint-valery-en-caux"
+            "product": "gourde-carpentras"
           }
         }
       },
@@ -245,7 +245,7 @@
         "text_YQYnrY": {
           "type": "text",
           "settings": {
-            "text": "<p>Derrière Club Chauvin, il y a deux passionnés du patrimoine, Élisabeth et Arnaud. Après avoir parcouru la France, ils ont fait le constat que les petits villages n'avaient pas tous le droit à leurs objets-souvenirs. Club Chauvin était né.</p>",
+            "text": "<p>Derrière Club Chauvin, il y a deux passionnés du patrimoine, Camille et Thomas. Après avoir parcouru la France, ils ont fait le constat que les petits villages n'avaient pas tous le droit à leurs objets-souvenirs. Club Chauvin était né.</p>",
             "text_style": "body"
           }
         },
@@ -263,7 +263,6 @@
         "text_YQYnrY",
         "button"
       ],
-      "disabled": true,
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
