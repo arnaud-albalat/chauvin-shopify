@@ -17,12 +17,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Livraison en 48h en France métropolitaine. Retours gratuits. Offre de lancement -10%",
+            "text": "Livraison en France métropolitaine. Frais de port offerts pour toute commande supérieure à 50€.",
             "link": ""
           }
         }
       },
-      "block_order": ["announcement-bar-0"],
+      "block_order": [
+        "announcement-bar-0"
+      ],
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -53,5 +55,8 @@
       }
     }
   },
-  "order": ["announcement-bar", "header"]
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }
