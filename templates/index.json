@@ -122,9 +122,9 @@
       "type": "map-departments",
       "settings": {
         "heading": "Nos départements",
-        "hover_color": "#1e3932",
-        "base_color": "#d1d5db",
-        "stroke_color": "#ffffff"
+        "hover_color": "#ba6c46",
+        "base_color": "#1e3932",
+        "stroke_color": "#3e6359"
       }
     },
     "image-with-text": {
