@@ -23,8 +23,8 @@
           "type": "row",
           "settings": {
             "caption": "",
-            "heading": "Parce que chaque ville de France a son histoire",
-            "text": "<p>Créé en 2026, Club Chauvin est une marque française d’objets-souvenirs inspirés des paysages typiques de nos villes et villages français. </p>",
+            "heading": "Notre mission",
+            "text": "<p><br/>Club Chauvin est né d'un constat  : il n'y a pas que les grandes métropoles qui méritent d’être célébrées.</p><p>Notre mission est d’offrir à chaque commune, des grandes aux petites, son propre univers graphique. </p><p>Nous voulons redonner une image aux \"oubliés\" des boutiques de souvenirs classiques.<br/><br/></p>",
             "button_label": "",
             "button_link": ""
           }
@@ -52,6 +52,7 @@
         },
         "row_MCAhem": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "caption": "",
             "heading": "Célébrez vos racines avec style",
