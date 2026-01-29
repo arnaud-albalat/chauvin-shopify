@@ -42,6 +42,7 @@
         },
         "row_Eq6BGY": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "caption": "",
             "heading": "Parce que vos souvenirs méritent le meilleur",
