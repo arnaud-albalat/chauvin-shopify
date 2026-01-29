@@ -24,7 +24,7 @@
         "featured_collection_J7nffx": {
           "type": "featured_collection",
           "settings": {
-            "collection": "deauville"
+            "collection": "pinet"
           }
         },
         "featured_collection_cYJLDG": {
@@ -36,7 +36,7 @@
         "featured_collection_mpQipH": {
           "type": "featured_collection",
           "settings": {
-            "collection": "spay"
+            "collection": "saint-andre-en-barrois"
           }
         },
         "featured_collection_jkkwLr": {
@@ -121,7 +121,10 @@
     "map_departments_new": {
       "type": "map-departments",
       "settings": {
-        "heading": "Nos départements"
+        "heading": "Nos départements",
+        "hover_color": "#1e3932",
+        "base_color": "#d1d5db",
+        "stroke_color": "#ffffff"
       }
     },
     "image-with-text": {
@@ -150,7 +153,11 @@
           }
         }
       },
-      "block_order": ["heading", "text_YQYnrY", "button"],
+      "block_order": [
+        "heading",
+        "text_YQYnrY",
+        "button"
+      ],
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
@@ -200,7 +207,11 @@
           }
         }
       },
-      "block_order": ["column_xq67Dn", "column_VmRMNR", "column_GyfUpF"],
+      "block_order": [
+        "column_xq67Dn",
+        "column_VmRMNR",
+        "column_GyfUpF"
+      ],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Validé par les locaux",
