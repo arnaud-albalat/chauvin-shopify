@@ -281,6 +281,60 @@
         "padding_bottom": 32
       }
     },
+    "multicolumn_krkg4Y": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_xq67Dn": {
+          "type": "column",
+          "settings": {
+            "title": "Noémie.D",
+            "text": "<p>J'ai acheté un poster de Fauville-en-Caux, et franchement, le rendu est superbe. Ça fait vraiment déco soignée et pas simple souvenir touristique. <br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_VmRMNR": {
+          "type": "column",
+          "settings": {
+            "title": "Julie.B",
+            "text": "<p>Enfin un site qui pense aux petits villages ! J'ai pu offrir à mon père l'affiche de son village d'enfance qu'on ne trouve nulle part ailleurs. Il a adoré le clin d'œil.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_GyfUpF": {
+          "type": "column",
+          "settings": {
+            "title": "Jules.V",
+            "text": "<p>J'avais peur que ça arrive plié, mais l'emballage était super rigide. Le mug est arrivé nickel. </p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_xq67Dn",
+        "column_VmRMNR",
+        "column_GyfUpF"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Validé par les locaux",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "presse_logos_BWPCQb": {
       "type": "presse-logos",
       "blocks": {
@@ -392,6 +446,7 @@
     "featured_products_T9r7Je",
     "page_list_TUQb8c",
     "image-with-text",
+    "multicolumn_krkg4Y",
     "presse_logos_BWPCQb",
     "arguments_YxY7yw"
   ]
