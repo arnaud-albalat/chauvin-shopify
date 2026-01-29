@@ -118,118 +118,10 @@
         "padding_bottom": 36
       }
     },
-    "page_list_TUQb8c": {
-      "type": "page-list",
-      "blocks": {
-        "page_card_3H8VL3": {
-          "type": "item",
-          "settings": {
-            "page": "auvergne-rhone-alpes",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_6.png"
-          }
-        },
-        "page_card_7AwHgj": {
-          "type": "item",
-          "settings": {
-            "page": "bourgogne-franche-comte",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_8.png"
-          }
-        },
-        "page_card_qbhjQ7": {
-          "type": "item",
-          "settings": {
-            "page": "bretagne",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px.png"
-          }
-        },
-        "page_card_G8KHww": {
-          "type": "item",
-          "settings": {
-            "page": "centre-val-de-loire",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_7.png"
-          }
-        },
-        "page_card_hkpmBR": {
-          "type": "item",
-          "settings": {
-            "page": "grand-est",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_11.png"
-          }
-        },
-        "page_card_echgEF": {
-          "type": "item",
-          "settings": {
-            "page": "nouvelle-aquitaine",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_4.png"
-          }
-        },
-        "page_card_c3BfpW": {
-          "type": "item",
-          "settings": {
-            "page": "ile-de-france",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_3.png"
-          }
-        },
-        "page_card_CBakK4": {
-          "type": "item",
-          "settings": {
-            "page": "normandie",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_1.png"
-          }
-        },
-        "page_card_a3pf34": {
-          "type": "item",
-          "settings": {
-            "page": "nouvelle-aquitaine-1",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_10.png"
-          }
-        },
-        "page_card_PqK46X": {
-          "type": "item",
-          "settings": {
-            "page": "occitanie",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_2.png"
-          }
-        },
-        "page_card_b6fggH": {
-          "type": "item",
-          "settings": {
-            "page": "pays-de-la-loire",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_9.png"
-          }
-        },
-        "page_card_gpXxaD": {
-          "type": "item",
-          "settings": {
-            "page": "provence-alpes-cote-dazur",
-            "image": "shopify://shop_images/Sans_titre_1920_x_1920_px_5.png"
-          }
-        }
-      },
-      "block_order": [
-        "page_card_3H8VL3",
-        "page_card_7AwHgj",
-        "page_card_qbhjQ7",
-        "page_card_G8KHww",
-        "page_card_hkpmBR",
-        "page_card_echgEF",
-        "page_card_c3BfpW",
-        "page_card_CBakK4",
-        "page_card_a3pf34",
-        "page_card_PqK46X",
-        "page_card_b6fggH",
-        "page_card_gpXxaD"
-      ],
-      "name": "Liste de pages",
+    "map_departments_new": {
+      "type": "map-departments",
       "settings": {
-        "title": "Nos régions",
-        "heading_size": "h1",
-        "columns_desktop": 6,
-        "color_scheme": "",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Nos départements"
       }
     },
     "image-with-text": {
@@ -258,11 +150,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text_YQYnrY",
-        "button"
-      ],
+      "block_order": ["heading", "text_YQYnrY", "button"],
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
@@ -312,11 +200,7 @@
           }
         }
       },
-      "block_order": [
-        "column_xq67Dn",
-        "column_VmRMNR",
-        "column_GyfUpF"
-      ],
+      "block_order": ["column_xq67Dn", "column_VmRMNR", "column_GyfUpF"],
       "name": "t:sections.multicolumn.presets.name",
       "settings": {
         "title": "Validé par les locaux",
@@ -444,7 +328,7 @@
     "video_search_hero",
     "featured_posters_kdYfFw",
     "featured_products_T9r7Je",
-    "page_list_TUQb8c",
+    "map_departments_new",
     "image-with-text",
     "multicolumn_krkg4Y",
     "presse_logos_BWPCQb",

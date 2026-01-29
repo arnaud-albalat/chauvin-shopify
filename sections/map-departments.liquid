@@ -1,0 +1,168 @@
+{% schema %}
+{
+  "name": "Map Departments",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Nos départements"
+    },
+    {
+      "type": "color",
+      "id": "hover_color",
+      "label": "Hover Color",
+      "default": "#1e3932"
+    },
+    {
+      "type": "color",
+      "id": "base_color",
+      "label": "Base Department Color",
+      "default": "#d1d5db"
+    },
+    {
+      "type": "color",
+      "id": "stroke_color",
+      "label": "Stroke Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Map Departments"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="map-departments-wrapper page-width">
+  {% if section.settings.heading != blank %}
+    <h2 class="title h1 center">{{ section.settings.heading }}</h2>
+  {% endif %}
+  
+  <div class="france-map-container">
+    {% render 'france-map' %}
+    <div id="department-tooltip" class="department-tooltip"></div>
+  </div>
+</div>
+
+<style>
+  .map-departments-wrapper {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  
+  .france-map-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* SVG Styling */
+  .france-map-container svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .departement {
+    fill: {{ section.settings.base_color }};
+    stroke: {{ section.settings.stroke_color }};
+    stroke-width: 1px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+  }
+
+  .departement:hover {
+    fill: {{ section.settings.hover_color }};
+  }
+
+  /* Tooltip Styling */
+  .department-tooltip {
+    position: fixed;
+    display: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    white-space: nowrap;
+  }
+  
+  .center {
+    text-align: center;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const departments = document.querySelectorAll('.departement');
+  const tooltip = document.getElementById('department-tooltip');
+
+  departments.forEach(dept => {
+    // Tooltip behavior
+    dept.addEventListener('mouseenter', (e) => {
+      const name = dept.getAttribute('data-nom');
+      if (name) {
+        tooltip.textContent = name;
+        tooltip.style.display = 'block';
+      }
+    });
+
+    dept.addEventListener('mousemove', (e) => {
+      tooltip.style.left = e.clientX + 'px';
+      tooltip.style.top = e.clientY + 'px';
+    });
+
+    dept.addEventListener('mouseleave', () => {
+      tooltip.style.display = 'none';
+    });
+
+    // Navigation behavior
+    dept.addEventListener('click', () => {
+      // Find the class that contains the slug
+      // Classes format: region-XX departement departement-XX departement-slug
+      
+      let slug = '';
+      const classes = dept.classList;
+      
+      // We look for a class starting with 'departement-' that is NOT 'departement' and NOT 'departement-XX' (digits)
+      // Actually usually it's the last one, but let's be robust
+      
+      for (let i = 0; i < classes.length; i++) {
+        const cls = classes[i];
+         if (cls === 'departement') continue;
+         if (cls.match(/^departement-\d+$/)) continue; // skip dept number
+         if (cls.match(/^departement-[a-zA-Z0-9-]+$/)) {
+             slug = cls.replace('departement-', '');
+             // break; // Take the first valid slug found? The last one is usually the good one in the SVG we saw
+         }
+      }
+      
+      // Fallback: slugify data-nom
+      if (!slug) {
+         const name = dept.getAttribute('data-nom');
+         if (name) {
+            slug = name.toLowerCase()
+                  .replace(/ /g, '-')
+                  .replace(/'/g, '')
+                  .replace(/[àâä]/g, 'a')
+                  .replace(/[éèêë]/g, 'e')
+                  .replace(/[îï]/g, 'i')
+                  .replace(/[ôö]/g, 'o')
+                  .replace(/[ùûü]/g, 'u')
+                  .replace(/[ç]/g, 'c');
+         }
+      }
+
+      if (slug) {
+        window.location.href = '/pages/' + slug;
+      }
+    });
+  });
+});
+</script>
