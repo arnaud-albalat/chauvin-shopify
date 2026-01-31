@@ -1,0 +1,176 @@
+{% schema %}
+{
+  "name": "About Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image de fond"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "LE COMPAGNON DU QUOTIDIEN 100% MADE IN FRANCE"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Déjà adopté par +2 000 patriotes.</p>"
+    },
+    {
+        "type": "range",
+        "id": "overlay_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Opacité du voile noir",
+        "default": 30
+    },
+    {
+        "type": "range",
+        "id": "height",
+        "min": 200,
+        "max": 1000,
+        "step": 50,
+        "unit": "px",
+        "label": "Hauteur de la section (Desktop)",
+        "default": 600
+    }
+  ],
+  "presets": [
+    {
+      "name": "About Hero"
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  .about-hero-{{ section.id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: {{ section.settings.height }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+
+  .about-hero__media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .about-hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-hero__media svg {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    fill: #ccc;
+  }
+
+  .about-hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    z-index: 1;
+  }
+
+  .about-hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-hero__title {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-hero__description {
+    color: #fff;
+    margin-top: 1rem;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  }
+  
+  .about-hero__description p {
+      margin: 0;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 750px) {
+    .about-hero-{{ section.id }} {
+        height: auto;
+        min-height: 400px;
+        padding: 60px 20px;
+    }
+    
+    .about-hero__title {
+        font-size: 2rem;
+    }
+    
+    .about-hero__description {
+        font-size: 1rem;
+    }
+  }
+{% endstyle %}
+
+<div class="about-hero-{{ section.id }}">
+  <div class="about-hero__media">
+    {%- if section.settings.image != blank -%}
+      {{ section.settings.image | image_url: width: 3840 | image_tag: 
+         loading: 'eager', 
+         sizes: '100vw', 
+         widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+         style: 'object-position: center;'
+      }}
+    {%- else -%}
+      {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+
+  <div class="about-hero__overlay"> </div>
+
+  <div class="about-hero__content page-width">
+    {%- if section.settings.title != blank -%}
+      <h1 class="about-hero__title">
+        {{ section.settings.title | escape }}
+      </h1>
+    {%- endif -%}
+    {%- if section.settings.description != blank -%}
+      <div class="about-hero__description rte">
+        {{ section.settings.description }}
+      </div>
+    {%- endif -%}
+  </div>
+</div>

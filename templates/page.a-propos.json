@@ -9,6 +9,16 @@
  */
 {
   "sections": {
+    "about-hero": {
+      "type": "about-hero",
+      "settings": {
+        "image": "shopify://shop_images/Generated_Image_January_31_2026_-_8_37PM_1.jpg",
+        "title": "Célébrez vos racines avec style",
+        "description": "<p>Club Chauvin, la marque française d’objets-souvenirs inspirés des paysages typiques de nos villes et villages français.<br/></p>",
+        "overlay_opacity": 10,
+        "height": 450
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -132,6 +142,7 @@
     }
   },
   "order": [
+    "about-hero",
     "main",
     "multirow_ztpaKT",
     "rich_text_n6MnHA"
