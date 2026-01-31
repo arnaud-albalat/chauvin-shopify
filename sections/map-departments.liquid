@@ -3,10 +3,20 @@
   "name": "Map Departments",
   "settings": [
     {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "heading",
       "label": "Heading",
-      "default": "Nos départements"
+      "default": "Titre"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Avec plus de 15.000 étudiants en santé inscrits dans toute la France, nous avons accompagné des milliers de familles sur tout le territoire.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Map Colors"
     },
     {
       "type": "color",
@@ -24,7 +34,7 @@
       "type": "color",
       "id": "stroke_color",
       "label": "Stroke Color",
-      "default": "#3e6359"
+      "default": "#ffffff"
     }
   ],
   "presets": [
@@ -36,33 +46,52 @@
 {% endschema %}
 
 <div class="map-departments-wrapper page-width">
-  {% if section.settings.heading != blank %}
-    <h2 class="title h1 center">{{ section.settings.heading }}</h2>
-  {% endif %}
-  
-  <div class="france-map-container">
-    {% render 'france-map' %}
-    <div id="department-tooltip" class="department-tooltip"></div>
+  <div class="map-departments-grid">
+    <div class="map-column">
+      <div class="france-map-container">
+        {% render 'france-map' %}
+        <div id="department-tooltip" class="department-tooltip"></div>
+      </div>
+    </div>
+    <div class="content-column">
+      {% if section.settings.heading != blank %}
+        <h2 class="title h1 map-title">{{ section.settings.heading }}</h2>
+      {% endif %}
+      
+      {% if section.settings.description != blank %}
+        <div class="map-description rte">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
 
 <style>
   .map-departments-wrapper {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
-  
-  .france-map-container {
-    position: relative;
-    width: 100%;
-    max-width: 650px;
-    margin: 0 auto;
+
+  .map-departments-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
   }
 
   /* SVG Styling */
+  .france-map-container {
+    position: relative;
+    width: 425px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
   .france-map-container svg {
     width: 100%;
     height: auto;
+    display: block;
   }
 
   .departement {
@@ -75,6 +104,23 @@
 
   .departement:hover {
     fill: {{ section.settings.hover_color }};
+  }
+
+  .content-column {
+    text-align: center;
+  }
+
+  .map-title {
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  .map-title strong {
+    color: {{ section.settings.hover_color }};
+    font-weight: inherit;
+  }
+
+  .map-description {
   }
 
   /* Tooltip Styling */
@@ -92,9 +138,30 @@
     margin-top: -10px;
     white-space: nowrap;
   }
-  
-  .center {
-    text-align: center;
+
+  /* Desktop Layout */
+  @media screen and (min-width: 990px) {
+    .map-departments-grid {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .map-column {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    .france-map-container {
+      margin: 0;
+    }
+
+    .content-column {
+      flex: 0 1 auto;
+      max-width: 450px;
+      text-align: left;
+    }
   }
 </style>
 
@@ -120,26 +187,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     dept.addEventListener('mouseleave', () => {
       tooltip.style.display = 'none';
+      tooltip.textContent = ''; // Clear content
     });
 
     // Navigation behavior
     dept.addEventListener('click', () => {
-      // Find the class that contains the slug
-      // Classes format: region-XX departement departement-XX departement-slug
-      
       let slug = '';
       const classes = dept.classList;
       
-      // We look for a class starting with 'departement-' that is NOT 'departement' and NOT 'departement-XX' (digits)
-      // Actually usually it's the last one, but let's be robust
-      
+      // Look for slug in class list
       for (let i = 0; i < classes.length; i++) {
         const cls = classes[i];
          if (cls === 'departement') continue;
          if (cls.match(/^departement-\d+$/)) continue; // skip dept number
          if (cls.match(/^departement-[a-zA-Z0-9-]+$/)) {
              slug = cls.replace('departement-', '');
-             // break; // Take the first valid slug found? The last one is usually the good one in the SVG we saw
          }
       }
       
