@@ -1,123 +1,237 @@
+{% comment %}
+  Section: Ils parlent de nous (Media Logos)
+{% endcomment %}
+
+<div class="press-section section-{{ section.id }}-padding">
+  <div class="page-width">
+    
+    {%- if section.settings.title != blank -%}
+      <div class="press-header">
+        <h2 class="press-title">{{ section.settings.title | escape }}</h2>
+      </div>
+    {%- endif -%}
+
+    <div class="press-logo-grid">
+      {%- for block in section.blocks -%}
+        <div class="press-logo-item" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" target="_blank" rel="noopener" class="press-logo-link">
+          {%- endif -%}
+
+          {%- if block.settings.image != blank -%}
+            {%- assign image_height = section.settings.logo_height | default: 50 -%}
+            {%- assign image_width = image_height | times: block.settings.image.aspect_ratio | ceil -%}
+            
+            {{ block.settings.image | image_url: width: 600 | image_tag: 
+              loading: 'lazy', 
+              height: image_height,
+              width: image_width,
+              class: 'press-logo-img',
+              alt: block.settings.image.alt | default: 'Logo média'
+            }}
+          {%- else -%}
+            <div class="press-placeholder">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              <span class="placeholder-text">Logo {{ forloop.index }}</span>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.bg_color }};
+    border-top: 2px solid {{ section.settings.text_color }};
+  }
+
+  .press-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .press-title {
+    font-size: {{ section.settings.title_size }}px;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+  }
+
+  .press-logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 50px; /* Espace vertical / horizontal */
+  }
+
+  .press-logo-item {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: {{ section.settings.opacity }}%; /* Gestion de l'opacité */
+    transition: opacity 0.3s ease;
+  }
+
+  .press-logo-item:hover {
+    opacity: 100%;
+  }
+
+  .press-logo-img {
+    height: {{ section.settings.logo_height }}px;
+    width: auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  /* Placeholder styling */
+  .press-placeholder {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    text-align: center;
+    width: 150px;
+  }
+  .placeholder-svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+    .press-logo-grid {
+      gap: 20px 30px;
+    }
+    .press-logo-img {
+      height: {{ section.settings.logo_height | times: 0.8 }}px; /* Plus petit sur mobile */
+    }
+  }
+{% endstyle %}
+
 {% schema %}
 {
-  "name": "Presse Logos",
+  "name": "Ils parlent de nous",
+  "tag": "section",
+  "class": "section",
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Titre",
-      "default": "Ils parlent de nous"
+      "default": "Ils parlent de nous",
+      "label": "Titre de la section"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Taille du titre",
+      "default": 24
     },
     {
       "type": "color",
       "id": "bg_color",
       "label": "Couleur de fond",
       "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Couleur du texte",
+      "default": "#333333"
+    },
+    {
+      "type": "header",
+      "content": "Paramètres des logos"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "min": 20,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Hauteur des logos",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "opacity",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Opacité des logos",
+      "default": 80,
+      "info": "L'opacité revient à 100% au survol."
+    },
+    {
+      "type": "header",
+      "content": "Espacement"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge supérieure",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Marge inférieure",
+      "default": 40
     }
   ],
   "blocks": [
     {
       "type": "logo",
-      "name": "Logo",
+      "name": "Logo Média",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "Image du logo"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Lien"
+          "label": "Lien vers l'article"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Presse Logos",
+      "name": "Ils parlent de nous",
       "blocks": [
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        },
-        {
-          "type": "logo"
-        }
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
       ]
     }
   ]
 }
 {% endschema %}
-
-{% style %}
-  .presse-logos-{{ section.id }} {
-    background-color: {{ section.settings.bg_color }};
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .presse-logos__title {
-    margin-bottom: 40px;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  .presse-logos__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  .presse-logos__item {
-    flex: 0 1 auto;
-    max-width: 150px;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-  }
-
-  .presse-logos__item:hover {
-    opacity: 1;
-  }
-
-  .presse-logos__item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-  }
-
-  .presse-logos__item:hover img {
-    filter: grayscale(0%);
-  }
-{% endstyle %}
-
-<div class="presse-logos-{{ section.id }}">
-  {%- if section.settings.title != blank -%}
-    <h2 class="presse-logos__title">{{ section.settings.title }}</h2>
-  {%- endif -%}
-
-  <div class="presse-logos__grid">
-    {%- for block in section.blocks -%}
-      {%- if block.settings.image != blank -%}
-        <div class="presse-logos__item" {{ block.shopify_attributes }}>
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" target="_blank" rel="noopener noreferrer">
-          {%- endif -%}
-            {{ block.settings.image | image_url: width: 300 | image_tag: loading: 'lazy' }}
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
-    {%- endfor -%}
-  </div>
-</div>
