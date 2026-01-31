@@ -154,7 +154,11 @@
           }
         }
       },
-      "block_order": ["heading", "text_YQYnrY", "button"],
+      "block_order": [
+        "heading",
+        "text_YQYnrY",
+        "button"
+      ],
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
@@ -173,52 +177,57 @@
         "padding_bottom": 32
       }
     },
-    "multicolumn_krkg4Y": {
-      "type": "multicolumn",
+    "client_testimonials": {
+      "type": "client-testimonials",
       "blocks": {
-        "column_xq67Dn": {
-          "type": "column",
+        "testimonial_1": {
+          "type": "client_testimonial",
           "settings": {
-            "title": "Noémie.D",
-            "text": "<p>J'ai acheté un poster de Fauville-en-Caux, et franchement, le rendu est superbe. Ça fait vraiment déco soignée et pas simple souvenir touristique. <br/><br/></p>",
-            "link_label": "",
-            "link": ""
+            "author": "Emmanuelle.R",
+            "title": "Livraison rapide",
+            "rating": 5,
+            "text": "Juste magnifique ! Rapidité de livraison, très bonne qualité des photos."
           }
         },
-        "column_VmRMNR": {
-          "type": "column",
+        "testimonial_2": {
+          "type": "client_testimonial",
           "settings": {
-            "title": "Julie.B",
-            "text": "<p>Enfin un site qui pense aux petits villages ! J'ai pu offrir à mon père l'affiche de son village d'enfance qu'on ne trouve nulle part ailleurs. Il a adoré le clin d'œil.</p>",
-            "link_label": "",
-            "link": ""
+            "author": "Fred.F",
+            "title": "Super qualité",
+            "rating": 5,
+            "text": "Très beau portrait. Conforme à la photo originale. Ça va donner des idées à d'autres."
           }
         },
-        "column_GyfUpF": {
-          "type": "column",
+        "testimonial_3": {
+          "type": "client_testimonial",
           "settings": {
-            "title": "Jules.V",
-            "text": "<p>J'avais peur que ça arrive plié, mais l'emballage était super rigide. Le mug est arrivé nickel. </p>",
-            "link_label": "",
-            "link": ""
+            "author": "Valentine",
+            "title": "Parfait pour un cadeau",
+            "rating": 5,
+            "text": "Super qualité ! Cadeau très réussi ! Je recommande."
+          }
+        },
+        "testimonial_4": {
+          "type": "client_testimonial",
+          "settings": {
+            "author": "Caroline.L",
+            "title": "Qualité premium",
+            "rating": 5,
+            "text": "Parfait rendu ! Très beau portrait et livraison rapide."
           }
         }
       },
-      "block_order": ["column_xq67Dn", "column_VmRMNR", "column_GyfUpF"],
-      "name": "t:sections.multicolumn.presets.name",
+      "block_order": [
+        "testimonial_1",
+        "testimonial_2",
+        "testimonial_3",
+        "testimonial_4"
+      ],
       "settings": {
-        "title": "Validé par les locaux",
+        "heading": "+200 000 clients satisfaits",
         "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "button_label": "",
-        "button_link": "",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
+        "star_color": "#4ca994",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -281,60 +290,6 @@
         "padding_bottom": 88
       }
     },
-    "client_testimonials": {
-      "type": "client-testimonials",
-      "blocks": {
-        "testimonial_1": {
-          "type": "client_testimonial",
-          "settings": {
-            "author": "Emmanuelle.R",
-            "title": "Livraison rapide",
-            "rating": 5,
-            "text": "Juste magnifique ! Rapidité de livraison, très bonne qualité des photos."
-          }
-        },
-        "testimonial_2": {
-          "type": "client_testimonial",
-          "settings": {
-            "author": "Fred.F",
-            "title": "Super qualité",
-            "rating": 5,
-            "text": "Très beau portrait. Conforme à la photo originale. Ça va donner des idées à d'autres."
-          }
-        },
-        "testimonial_3": {
-          "type": "client_testimonial",
-          "settings": {
-            "author": "Valentine",
-            "title": "Parfait pour un cadeau",
-            "rating": 5,
-            "text": "Super qualité ! Cadeau très réussi ! Je recommande."
-          }
-        },
-        "testimonial_4": {
-          "type": "client_testimonial",
-          "settings": {
-            "author": "Caroline.L",
-            "title": "Qualité premium",
-            "rating": 5,
-            "text": "Parfait rendu ! Très beau portrait et livraison rapide."
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_1",
-        "testimonial_2",
-        "testimonial_3",
-        "testimonial_4"
-      ],
-      "settings": {
-        "heading": "+200 000 clients satisfaits",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "arguments_YxY7yw": {
       "type": "arguments",
       "blocks": {
@@ -388,9 +343,8 @@
     "featured_products_T9r7Je",
     "map_departments_new",
     "image-with-text",
-    "multicolumn_krkg4Y",
-    "presse_logos_BWPCQb",
     "client_testimonials",
+    "presse_logos_BWPCQb",
     "arguments_YxY7yw"
   ]
 }
