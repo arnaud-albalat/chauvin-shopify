@@ -14,9 +14,63 @@
       "settings": {
         "image": "shopify://shop_images/Generated_Image_January_31_2026_-_8_37PM_1.jpg",
         "title": "Célébrez vos racines avec style",
-        "description": "<p>Club Chauvin, la marque française d’objets-souvenirs inspirés des paysages typiques de nos villes et villages français.<br/></p>",
+        "description": "<p>Club Chauvin, la marque d’objets-souvenirs inspirés de nos villes et villages.<br/></p>",
         "overlay_opacity": 10,
         "height": 450
+      }
+    },
+    "multicolumn_MVdgMX": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_kRNiPd": {
+          "type": "column",
+          "settings": {
+            "title": "Excellence matière",
+            "text": "<p>Nous sélectionnons des supports nobles pour garantir une longévité digne de vos plus beaux souvenirs.<br/><br/></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bWyzVk": {
+          "type": "column",
+          "settings": {
+            "title": "Édition sur-mesure",
+            "text": "<p>Chaque pièce est façonnée à la demande, spécialement pour votre intérieur.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wLPLrb": {
+          "type": "column",
+          "settings": {
+            "title": "Héritage réinventé",
+            "text": "<p>Nous redonnons vie aux archives de nos communes pour créer des objets uniques.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_kRNiPd",
+        "column_bWyzVk",
+        "column_wLPLrb"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Des valeurs portées haut et fier",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "main": {
@@ -144,6 +198,7 @@
   },
   "order": [
     "about-hero",
+    "multicolumn_MVdgMX",
     "main",
     "multirow_ztpaKT",
     "rich_text_n6MnHA"
