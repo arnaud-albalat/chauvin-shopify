@@ -183,6 +183,7 @@
         "testimonial_1": {
           "type": "client_testimonial",
           "settings": {
+            "image": "shopify://shop_images/Generated_Image_January_31_2026_-_9_15PM.jpg",
             "author": "Emmanuelle.R",
             "title": "Livraison rapide",
             "rating": 5,
@@ -192,6 +193,7 @@
         "testimonial_2": {
           "type": "client_testimonial",
           "settings": {
+            "image": "shopify://shop_images/Generated_Image_January_31_2026_-_9_19PM.jpg",
             "author": "Fred.F",
             "title": "Super qualité",
             "rating": 5,
