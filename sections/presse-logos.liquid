@@ -1,0 +1,123 @@
+{% schema %}
+{
+  "name": "Presse Logos",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre",
+      "default": "Ils parlent de nous"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Couleur de fond",
+      "default": "#ffffff"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Lien"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Presse Logos",
+      "blocks": [
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        },
+        {
+          "type": "logo"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% style %}
+  .presse-logos-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .presse-logos__title {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .presse-logos__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .presse-logos__item {
+    flex: 0 1 auto;
+    max-width: 150px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .presse-logos__item:hover {
+    opacity: 1;
+  }
+
+  .presse-logos__item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .presse-logos__item:hover img {
+    filter: grayscale(0%);
+  }
+{% endstyle %}
+
+<div class="presse-logos-{{ section.id }}">
+  {%- if section.settings.title != blank -%}
+    <h2 class="presse-logos__title">{{ section.settings.title }}</h2>
+  {%- endif -%}
+
+  <div class="presse-logos__grid">
+    {%- for block in section.blocks -%}
+      {%- if block.settings.image != blank -%}
+        <div class="presse-logos__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" target="_blank" rel="noopener noreferrer">
+          {%- endif -%}
+            {{ block.settings.image | image_url: width: 300 | image_tag: loading: 'lazy' }}
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
