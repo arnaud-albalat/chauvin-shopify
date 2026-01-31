@@ -1,0 +1,199 @@
+{{ 'section-client-testimonials.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    --section-padding-top: {{ section.settings.padding_top }}px;
+    --section-padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  /* Custom star color */
+  /* Custom star color */
+  .testimonial-card__star--filled {
+    fill: {{ section.settings.star_color }};
+  }
+  .testimonial-card__star--empty {
+    fill: none;
+    stroke: {{ section.settings.star_color }};
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient section-client-testimonials section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="client-testimonials__heading {{ section.settings.heading_size }}">
+        {{ section.settings.heading | escape }}
+      </h2>
+    {%- endif -%}
+
+    <div class="client-testimonials__slider">
+      {%- for block in section.blocks -%}
+        <div class="testimonial-card" {{ block.shopify_attributes }}>
+          <div class="testimonial-card__content">
+            {%- if block.settings.author != blank -%}
+              <span class="testimonial-card__author">{{ block.settings.author | escape }}</span>
+            {%- endif -%}
+            
+            {%- if block.settings.title != blank -%}
+              <h3 class="testimonial-card__title">{{ block.settings.title | escape }}</h3>
+            {%- endif -%}
+
+            <div class="testimonial-card__stars" aria-label="{{ block.settings.rating }} stars">
+              {%- for i in (1..5) -%}
+                {%- if i <= block.settings.rating -%}
+                  {% render 'icon-star-filled' %}
+                {%- else -%}
+                  {% render 'icon-star-empty' %}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+
+            {%- if block.settings.text != blank -%}
+              <p class="testimonial-card__text">{{ block.settings.text | escape }}</p>
+            {%- endif -%}
+          </div>
+
+          <div class="testimonial-card__image-container">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'testimonial-card__image' }}
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'testimonial-card__image placeholder-svg' }}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Client Testimonials",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "+200 000 clients satisfaits",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star Color",
+      "default": "#4CA994"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "client_testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product/Customer Image"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "default": "Emmanuelle R.",
+          "label": "Author Name"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "default": "Livraison rapide",
+          "label": "Review Title"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Rating"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "default": "Juste magnifique ! Rapidité de livraison, très bonne qualité des photos.",
+          "label": "Review Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Client Testimonials",
+      "blocks": [
+        {
+          "type": "client_testimonial"
+        },
+        {
+          "type": "client_testimonial"
+        },
+        {
+          "type": "client_testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
