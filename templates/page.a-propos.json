@@ -94,17 +94,6 @@
             "button_link": ""
           }
         },
-        "row_trDp7h": {
-          "type": "row",
-          "settings": {
-            "image": "shopify://shop_images/Tour_de_France_piou_piou.png",
-            "caption": "",
-            "heading": "Nos engagements",
-            "text": "<p>Parce que vos souvenirs méritent le meilleur, nous ne faisons pas les choses à moitié :</p><ul><li><strong>Sélection rigoureuse :</strong> Nous choisissons avec soin des supports de qualité </li></ul><p></p><ul><li><strong>Production à la commande :</strong> Chaque pièce est préparée spécialement pour vous</li></ul><p></p><ul><li><strong>Un processus unique :</strong> Nous transformons les archives et paysages de nos communes en véritables illustrations de collection</li></ul>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
         "row_Eq6BGY": {
           "type": "row",
           "disabled": true,
@@ -130,7 +119,6 @@
       },
       "block_order": [
         "row_WzQjd6",
-        "row_trDp7h",
         "row_Eq6BGY",
         "row_MCAhem"
       ],
