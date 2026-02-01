@@ -15,7 +15,7 @@
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
-  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+  <div class="contact page-width section-{{ section.id }}-padding">
     {%- if section.settings.heading != blank -%}
       <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         {{ section.settings.heading }}
@@ -23,7 +23,9 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
-    {%- liquid
+    <div class="contact-layout">
+      <div class="contact-form-column">
+        {%- liquid
       assign contact_form_class = 'isolate'
       if settings.animations_reveal_on_scroll
         assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
@@ -131,7 +133,24 @@
           {{ 'templates.contact.form.send' | t }}
         </button>
       </div>
-    {%- endform -%}
+        {%- endform -%}
+      </div>
+      <div class="contact-info-column">
+        <h3>Ou bien contactez-nous directement...</h3>
+        <div class="contact-method">
+           <h4>Email</h4>
+           <p><a href="mailto:contact@clubchauvin.fr">contact@clubchauvin.fr</a></p>
+        </div>
+        <div class="contact-method">
+           <h4>Téléphone</h4>
+           <p><a href="tel:0638655850">06 38 65 58 50</a></p>
+        </div>
+        <div class="contact-method">
+           <h4>WhatsApp</h4>
+           <p><a href="https://wa.me/33638655850" target="_blank">06 38 65 58 50</a></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

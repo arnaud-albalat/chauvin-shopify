@@ -37,3 +37,56 @@
     grid-column-gap: 2rem;
   }
 }
+
+/* Custom Contact Layout */
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  
+  .contact-form-column {
+    flex: 2;
+  }
+
+  .contact-info-column {
+    flex: 1;
+    padding-left: 2rem; /* Visual separation */
+    border-left: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  }
+}
+
+.contact-info-column h3 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.contact-method {
+  margin-bottom: 2.5rem;
+}
+
+.contact-method h4 {
+  margin: 0 0 0.5rem 0;
+  font-family: var(--font-heading-family);
+  font-size: 1.6rem;
+}
+
+.contact-method p,
+.contact-method a {
+  margin: 0;
+  color: rgba(var(--color-foreground), 0.75);
+  text-decoration: none;
+  transition: color var(--duration-default) ease;
+}
+
+.contact-method a:hover {
+  color: rgb(var(--color-foreground));
+  text-decoration: underline;
+}
