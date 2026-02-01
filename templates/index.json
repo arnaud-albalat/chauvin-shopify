@@ -122,7 +122,7 @@
       "type": "map-departments",
       "settings": {
         "heading": "Le meilleur de nos régions, <strong>chez vous</strong>",
-        "description": "<p>Que vous soyez en ville ou à la campagne, nous expédions nos meilleures sélections <strong>directement à votre porte</strong>.</p>",
+        "description": "<p>Que vous soyez en ville ou à la campagne, nous expédions <strong>directement à votre porte</strong>.</p>",
         "hover_color": "#ba6c46",
         "base_color": "#1e3932",
         "stroke_color": "#3e6359"
