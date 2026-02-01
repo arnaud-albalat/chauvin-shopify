@@ -142,50 +142,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_n6MnHA": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_pPbgnV": {
-          "type": "heading",
-          "settings": {
-            "heading": "Parler de sa marque",
-            "heading_size": "h1"
-          }
-        },
-        "text_pdRpB8": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Partagez des informations sur votre marque. Décrivez un produit, partagez des annonces ou souhaitez la bienvenue à vos clients dans votre boutique.</p>"
-          }
-        },
-        "button_W3ierN": {
-          "type": "button",
-          "settings": {
-            "button_label": "Texte du bouton",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_pPbgnV",
-        "text_pdRpB8",
-        "button_W3ierN"
-      ],
-      "custom_css": [],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "team_tAhhQA": {
       "type": "team",
       "blocks": {
@@ -241,7 +197,6 @@
     "multicolumn_MVdgMX",
     "main",
     "multirow_ztpaKT",
-    "rich_text_n6MnHA",
     "team_tAhhQA"
   ]
 }
