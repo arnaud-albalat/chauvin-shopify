@@ -84,62 +84,35 @@
         "padding_bottom": 28
       }
     },
-    "multirow_ztpaKT": {
-      "type": "multirow",
+    "rich_text_bC6H8g": {
+      "type": "rich-text",
       "blocks": {
-        "row_WzQjd6": {
-          "type": "row",
+        "heading_rjk3fr": {
+          "type": "heading",
           "settings": {
-            "caption": "",
             "heading": "Notre mission",
-            "text": "<p><br/>Club Chauvin est né d'un constat  : il n'y a pas que les grandes métropoles qui méritent d’être célébrées.</p><p>Notre mission est d’offrir à chaque commune, des grandes aux petites, son propre univers graphique. </p><p>Nous voulons redonner une image aux « oubliés » des boutiques de souvenirs.<br/><br/></p>",
-            "button_label": "",
-            "button_link": ""
+            "heading_size": "h1"
           }
         },
-        "row_Eq6BGY": {
-          "type": "row",
-          "disabled": true,
+        "text_qWJxHX": {
+          "type": "text",
           "settings": {
-            "caption": "",
-            "heading": "L'équipe",
-            "text": "<p>Nous sélectionnons avec soin des supports de qualité pour nos illustrations : affiches aux finitions soignées, mugs, tote bags et accessoires. </p><p>Chaque pièce est préparée à la commande pour garantir une impression parfaite et une esthétique unique. </p><p>Offrez-vous un morceau d'histoire locale avec des objets au design singulier, livrés chez vous avec la plus grande attention.</p>",
-            "button_label": "",
-            "button_link": ""
-          }
-        },
-        "row_MCAhem": {
-          "type": "row",
-          "disabled": true,
-          "settings": {
-            "caption": "",
-            "heading": "Célébrez vos racines avec style",
-            "text": "<p>Des bourgs de caractère aux villages les plus secrets, nous offrons à chaque commune son propre univers graphique.</p><p>Nos créations capturent l'âme de nos régions à travers un regard vintage, élégant et résolument moderne.</p>",
-            "button_label": "",
-            "button_link": ""
+            "text": "<p><strong>Club Chauvin</strong> est né d'un constat  : il n'y a pas que les grandes métropoles qui méritent d’être célébrées. Notre mission est d’offrir à <strong>chaque commune</strong>, des grandes aux petites, son <strong>propre univers graphique</strong>.  Nous voulons redonner une image aux « oubliés » des boutiques de souvenirs.<br/><br/></p>"
           }
         }
       },
       "block_order": [
-        "row_WzQjd6",
-        "row_Eq6BGY",
-        "row_MCAhem"
+        "heading_rjk3fr",
+        "text_qWJxHX"
       ],
-      "name": "t:sections.multirow.presets.name",
+      "name": "t:sections.rich-text.presets.name",
       "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "image_layout": "alternate-left",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "mobile_content_alignment": "left",
-        "section_color_scheme": "scheme-4",
-        "row_color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "team_tAhhQA": {
@@ -196,7 +169,7 @@
     "about-hero",
     "multicolumn_MVdgMX",
     "main",
-    "multirow_ztpaKT",
+    "rich_text_bC6H8g",
     "team_tAhhQA"
   ]
 }
