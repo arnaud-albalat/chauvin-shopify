@@ -183,7 +183,7 @@
         "testimonial_1": {
           "type": "client_testimonial",
           "settings": {
-            "image": "shopify://shop_images/Generated_Image_January_31_2026_-_9_15PM.jpg",
+            "image": "shopify://shop_images/Generated_Image_February_01_2026_-_9_56AM.jpg",
             "author": "Emmanuelle.R",
             "title": "Livraison rapide",
             "rating": 5,
@@ -193,29 +193,31 @@
         "testimonial_2": {
           "type": "client_testimonial",
           "settings": {
-            "image": "shopify://shop_images/Generated_Image_January_31_2026_-_9_19PM.jpg",
+            "image": "shopify://shop_images/Generated_Image_February_01_2026_-_10_10AM_1.jpg",
             "author": "Fred.F",
             "title": "Super qualité",
             "rating": 5,
-            "text": "Très beau portrait. Conforme à la photo originale. Ça va donner des idées à d'autres."
+            "text": "Très jolie tasse. Conforme à la photo originale. Ça va donner des idées à d'autres."
           }
         },
         "testimonial_3": {
           "type": "client_testimonial",
           "settings": {
+            "image": "shopify://shop_images/Generated_Image_February_01_2026_-_10_15AM.jpg",
             "author": "Valentine",
             "title": "Parfait pour un cadeau",
             "rating": 5,
-            "text": "Super qualité ! Cadeau très réussi ! Je recommande."
+            "text": "Cadeau très réussi ! Je recommande."
           }
         },
         "testimonial_4": {
           "type": "client_testimonial",
           "settings": {
+            "image": "shopify://shop_images/Generated_Image_February_01_2026_-_10_20AM.jpg",
             "author": "Caroline.L",
-            "title": "Qualité premium",
+            "title": "Top",
             "rating": 5,
-            "text": "Parfait rendu ! Très beau portrait et livraison rapide."
+            "text": "Parfait rendu ! La personne a été très contente de ce cadeau."
           }
         }
       },
@@ -226,7 +228,7 @@
         "testimonial_4"
       ],
       "settings": {
-        "heading": "+200 000 clients satisfaits",
+        "heading": "+2000 clients satisfaits",
         "heading_size": "h1",
         "color_scheme": "scheme-1",
         "star_color": "#4ca994",
