@@ -27,7 +27,7 @@
           "settings": {
             "image": "shopify://shop_images/matiere.png",
             "title": "Excellence matière",
-            "text": "<p>Nous sélectionnons des supports nobles pour garantir une longévité digne de vos plus beaux souvenirs.<br/><br/></p>",
+            "text": "<p>Nous sélectionnons des supports nobles pour garantir la qualité de chaque produit.<br/><br/></p>",
             "link_label": "",
             "link": ""
           }
@@ -139,7 +139,7 @@
           "settings": {
             "image": "shopify://shop_images/Design_sans_titre_10.png",
             "title": "Peut-être vous ?",
-            "text": "<p>Nous recrutons pour un poste de Community Manager. </p><p>Si vous êtes intéressé(e), envoyez-nous votre candidature à l'adresse contact@clubchauvin.fr !</p>"
+            "text": "<p>Nous recrutons pour un poste de Community Manager. </p><p>Si vous êtes intéressé(e), envoyez-nous votre candidature à l'adresse hello@clubchauvin.fr !</p>"
           }
         }
       },
