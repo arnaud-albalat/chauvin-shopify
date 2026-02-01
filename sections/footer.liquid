@@ -52,11 +52,19 @@
       <div class="footer__content-top page-width">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
-            if section.blocks.size == 9
+            assign blocks_size = section.blocks.size
+            if section.settings.show_departments and section.settings.department_menu != blank
+              assign blocks_size = blocks_size | plus: 1
+            endif
+            if section.settings.show_social and has_social_icons
+               assign blocks_size = blocks_size | plus: 1
+            endif
+
+            if blocks_size == 9
               assign footer_grid_class = 'grid--3-col-tablet'
-            elsif section.blocks.size > 6
+            elsif blocks_size > 6
               assign footer_grid_class = 'grid--4-col-desktop'
-            elsif section.blocks.size > 4
+            elsif blocks_size > 4
               assign footer_grid_class = 'grid--3-col-tablet'
             endif
           -%}
@@ -155,8 +163,41 @@
                     </div>
                 {%- endcase -%}
               </div>
-            {%- endfor -%}
+        {%- endfor -%}
+
+        {%- if section.settings.show_departments and section.settings.department_menu != blank -%}
+          <div class="footer-block grid__item footer-block--menu{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ section.blocks.size | plus: 1 }};"
+            {% endif %}>
+            <h2 class="footer-block__heading inline-richtext">Nos Départements</h2>
+            <ul class="footer-block__details-content list-unstyled">
+              {%- for link in linklists[section.settings.department_menu].links -%}
+                <li>
+                  <a href="{{ link.url }}" class="link link--text list-menu__item list-menu__item--link">
+                    {{ link.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
           </div>
+        {%- endif -%}
+
+        {%- if section.settings.show_social and has_social_icons -%}
+          <div class="footer-block grid__item footer-block--menu{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ blocks_size }};"
+            {% endif %}>
+            <h2 class="footer-block__heading inline-richtext">Suivez nous</h2>
+            {%- render 'social-icons', class: 'footer__list-social' -%}
+            <div class="footer-block__details-content rte">
+              <p>Taguez <span style="text-decoration: underline;">club.chauvin</span> sur Instagram pour nous partager vos plus beaux produits !</p>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
         {%- endif -%}
 
         <div
@@ -242,13 +283,13 @@
             </div>
           {%- endif -%}
 
-          {%- if section.settings.show_social and has_social_icons -%}
-            {%- render 'social-icons', class: 'footer__list-social' -%}
-          {%- endif -%}
+
         </div>
       </div>
     {%- endunless -%}
   {%- endif -%}
+
+
 
   <div
     class="footer__content-bottom{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -477,6 +518,21 @@
       "default": true,
       "label": "t:sections.footer.settings.enable_language_selector.label",
       "info": "t:sections.footer.settings.enable_language_selector.info"
+    },
+    {
+      "type": "header",
+      "content": "Départements"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_departments",
+      "default": true,
+      "label": "Afficher les départements"
+    },
+    {
+      "type": "link_list",
+      "id": "department_menu",
+      "label": "Menu des départements"
     },
     {
       "type": "checkbox",
