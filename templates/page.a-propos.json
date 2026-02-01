@@ -14,7 +14,7 @@
       "settings": {
         "image": "shopify://shop_images/Generated_Image_January_31_2026_-_8_37PM_1.jpg",
         "title": "Célébrez vos racines avec style",
-        "description": "<p>Club Chauvin, la marque d’objets-souvenirs inspirés de nos villes et villages.<br/></p>",
+        "description": "<p>Objets-souvenirs inspirés des villes et villages de France<br/></p>",
         "overlay_opacity": 10,
         "height": 450
       }
@@ -25,6 +25,7 @@
         "column_kRNiPd": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/matiere.png",
             "title": "Excellence matière",
             "text": "<p>Nous sélectionnons des supports nobles pour garantir une longévité digne de vos plus beaux souvenirs.<br/><br/></p>",
             "link_label": "",
@@ -34,6 +35,7 @@
         "column_bWyzVk": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/sur_mesure.png",
             "title": "Édition sur-mesure",
             "text": "<p>Chaque pièce est façonnée à la demande, spécialement pour votre intérieur.</p>",
             "link_label": "",
@@ -43,6 +45,7 @@
         "column_wLPLrb": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/archives.png",
             "title": "Héritage réinventé",
             "text": "<p>Nous redonnons vie aux archives de nos communes pour créer des objets uniques.</p>",
             "link_label": "",
@@ -59,12 +62,12 @@
       "settings": {
         "title": "Nos engagements",
         "heading_size": "h1",
-        "image_width": "full",
+        "image_width": "third",
         "image_ratio": "adapt",
         "button_label": "",
         "button_link": "",
         "columns_desktop": 3,
-        "column_alignment": "left",
+        "column_alignment": "center",
         "background_style": "primary",
         "color_scheme": "",
         "columns_mobile": "1",
