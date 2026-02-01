@@ -23,7 +23,7 @@
       "settings": {
         "image": "shopify://shop_images/Generated_Image_January_29_2026_-_10_23PM.jpg",
         "title": "FAQ",
-        "description": "<p>Une question qui ne figure pas ici ? Contactez-nous à l'adresse contact@clubchauvin.fr</p>",
+        "description": "<p>Une question qui ne figure pas ici ? Contactez-nous à l'adresse hello@clubchauvin.fr</p>",
         "overlay_opacity": 30,
         "height": 300
       }
@@ -67,7 +67,7 @@
             "faq_section": "2",
             "heading": "Je me suis trompé de taille, que faire ?",
             "icon": "check_mark",
-            "row_content": "<p>Pas de panique ! Vous avez <strong>14 jours</strong> après réception pour nous retourner un article. Contactez l’adresse contact@clubchauvin.fr pour lancer la procédure.</p>",
+            "row_content": "<p>Pas de panique ! Vous avez <strong>14 jours</strong> après réception pour nous retourner un article. Contactez l’adresse hello@clubchauvin.fr pour lancer la procédure.</p>",
             "page": ""
           }
         },
