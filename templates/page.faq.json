@@ -21,6 +21,7 @@
       "type": "about-hero",
       "name": "About Hero",
       "settings": {
+        "image": "shopify://shop_images/Generated_Image_January_29_2026_-_10_23PM.jpg",
         "title": "FAQ",
         "description": "<p>Une question qui ne figure pas ici ? Contactez-nous à l'adresse contact@clubchauvin.fr</p>",
         "overlay_opacity": 30,
