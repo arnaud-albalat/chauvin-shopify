@@ -192,7 +192,7 @@
         "team_card_fawRhV": {
           "type": "team_card",
           "settings": {
-            "image": "shopify://shop_images/elisabeth.jpg",
+            "image": "shopify://shop_images/elisabeth_e786be13-1ab1-4670-b01b-b2c6293b3f2e.jpg",
             "title": "Élisabeth",
             "text": "<p>Élisabeth s'occupe du choix des fournisseurs, du test des produits et du service client.</p>"
           }
@@ -200,7 +200,7 @@
         "team_card_X876Dz": {
           "type": "team_card",
           "settings": {
-            "image": "shopify://shop_images/arnaud.jpg",
+            "image": "shopify://shop_images/arnaud_bbc92a8b-dd25-4194-a1de-a6de713e46e5.jpg",
             "title": "Arnaud",
             "text": "<p>Arnaud s'occupe du développement du site et du référencement sur les moteurs de recherche.</p>"
           }
