@@ -11,9 +11,20 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
-        "padding_top": 28,
+        "padding_top": 56,
         "padding_bottom": 0
+      }
+    },
+    "about_hero_B7JeaH": {
+      "type": "about-hero",
+      "name": "About Hero",
+      "settings": {
+        "title": "FAQ",
+        "description": "<p>Une question qui ne figure pas ici ? Contactez-nous à l'adresse contact@clubchauvin.fr</p>",
+        "overlay_opacity": 30,
+        "height": 300
       }
     },
     "faq": {
@@ -131,6 +142,7 @@
   },
   "order": [
     "main",
+    "about_hero_B7JeaH",
     "faq"
   ]
 }
