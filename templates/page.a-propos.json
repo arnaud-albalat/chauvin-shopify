@@ -182,6 +182,54 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "team_tAhhQA": {
+      "type": "team",
+      "blocks": {
+        "team_card_fawRhV": {
+          "type": "team_card",
+          "settings": {
+            "image": "shopify://shop_images/elisabeth.jpg",
+            "title": "Élisabeth",
+            "text": "<p>Élisabeth s'occupe du choix des fournisseurs, du test des produits et du service client.</p>"
+          }
+        },
+        "team_card_X876Dz": {
+          "type": "team_card",
+          "settings": {
+            "image": "shopify://shop_images/arnaud.jpg",
+            "title": "Arnaud",
+            "text": "<p>Arnaud s'occupe du développement du site et du référencement sur les moteurs de recherche.</p>"
+          }
+        },
+        "team_card_ht6Jxk": {
+          "type": "team_card",
+          "settings": {
+            "title": "Peut-être vous ?",
+            "text": "<p>Nous recrutons pour un poste de Community Manager. Si vous êtes intéressé(e), envoyez-nous votre candidature à l'adresse contact@clubchauvin.fr !</p>"
+          }
+        }
+      },
+      "block_order": [
+        "team_card_fawRhV",
+        "team_card_X876Dz",
+        "team_card_ht6Jxk"
+      ],
+      "name": "Equipe",
+      "settings": {
+        "title": "Notre Équipe",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -189,6 +237,7 @@
     "multicolumn_MVdgMX",
     "main",
     "multirow_ztpaKT",
-    "rich_text_n6MnHA"
+    "rich_text_n6MnHA",
+    "team_tAhhQA"
   ]
 }
