@@ -20,10 +20,18 @@
             "heading": "Parce que vos souvenirs méritent le meilleur.",
             "subtext": "<p>Produits conçus en France, fabriqués en Europe.<br/></p>"
           }
+        },
+        "link_list_eDz8mn": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Liens rapides",
+            "menu": "footer"
+          }
         }
       },
       "block_order": [
-        "text_TRNy4f"
+        "text_TRNy4f",
+        "link_list_eDz8mn"
       ],
       "settings": {
         "color_scheme": "scheme-4",
