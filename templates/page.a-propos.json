@@ -208,6 +208,7 @@
         "team_card_ht6Jxk": {
           "type": "team_card",
           "settings": {
+            "image": "shopify://shop_images/Design_sans_titre_10.png",
             "title": "Peut-être vous ?",
             "text": "<p>Nous recrutons pour un poste de Community Manager. Si vous êtes intéressé(e), envoyez-nous votre candidature à l'adresse contact@clubchauvin.fr !</p>"
           }
