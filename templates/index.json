@@ -154,11 +154,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text_YQYnrY",
-        "button"
-      ],
+      "block_order": ["heading", "text_YQYnrY", "button"],
       "custom_css": [],
       "settings": {
         "image": "shopify://shop_images/Happy_piou_piou_1_1.png",
@@ -308,7 +304,7 @@
           "type": "feature",
           "settings": {
             "icon": "shopify://shop_images/Livraison_rapide_1.png",
-            "text": "Livraison en 2 à 5 jours"
+            "text": "Expédition sous 2 à 5 jours"
           }
         },
         "feature_FktFyH": {
