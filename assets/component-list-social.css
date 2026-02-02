@@ -6,12 +6,6 @@
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 749px) {
-  .list-social {
-    justify-content: center;
-  }
-}
-
 .list-social__item {
   color: rgb(var(--color-foreground));
   background: rgba(255, 255, 255, 0.1);
