@@ -61,13 +61,23 @@
             "page": ""
           }
         },
+        "question_EpfQAn": {
+          "type": "question",
+          "settings": {
+            "faq_section": "1",
+            "heading": "Puis-je modifier l'adresse de livraison ?",
+            "icon": "check_mark",
+            "row_content": "<p>Vous ne pouvez pas modifier l'adresse de livraison vous-même après la passation de la commande. Selon l'état d'avancement de votre commande, la modification pourra être effectuée par notre service client en envoyant un e-mail à <span style=\"text-decoration:underline\">hello@clubchauvin.fr</span>. Notre service client vous confirmera alors si la modification est encore possible.  <br/><br/></p>",
+            "page": ""
+          }
+        },
         "faq-item-4": {
           "type": "question",
           "settings": {
             "faq_section": "2",
             "heading": "Je me suis trompé de taille, que faire ?",
             "icon": "check_mark",
-            "row_content": "<p>Pas de panique ! Vous avez <strong>14 jours</strong> après réception pour nous retourner un article. Contactez l’adresse hello@clubchauvin.fr pour lancer la procédure.</p>",
+            "row_content": "<p>Pas de panique ! Vous avez <strong>14 jours</strong> après réception pour nous retourner un article. Contactez l’adresse <span style=\"text-decoration:underline\">hello@clubchauvin.fr</span> pour lancer la procédure.</p>",
             "page": ""
           }
         },
@@ -116,6 +126,7 @@
         "faq-item-1",
         "faq-item-2",
         "faq-item-3",
+        "question_EpfQAn",
         "faq-item-4",
         "question_LVURwH",
         "question_PpBjUH",
@@ -140,5 +151,9 @@
       }
     }
   },
-  "order": ["main", "about_hero_B7JeaH", "faq"]
+  "order": [
+    "main",
+    "about_hero_B7JeaH",
+    "faq"
+  ]
 }
